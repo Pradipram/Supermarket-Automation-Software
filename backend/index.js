@@ -24,7 +24,7 @@ app.get('/',(req,res)=>{
 
 // connecting to database
 try{
-    mongoose.connect("mongodb://127.0.0.1:27017/supermarket");
+    mongoose.connect("mongodb+srv://prajal824:357pramongo@cluster0.xrmteva.mongodb.net/SuperMarketAutomation");
     console.log("Connected to database");
 }catch(err){
     console.log("Connection to mongodb failed : "+err);

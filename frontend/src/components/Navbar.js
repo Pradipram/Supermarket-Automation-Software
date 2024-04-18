@@ -45,16 +45,16 @@ export default function Navbar() {
         </a>)}
 
 
-        <a href='/'>
+        <a href='/app/about'>
          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             About
         </Typography>
         </a>
-        <a href='/'>
+        {/* <a href='/'>
          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Contact Us
         </Typography>
-        </a>
+        </a> */}
 
       </Toolbar>
       <IconButton className='logout-btn' onClick={logoutHandler}>

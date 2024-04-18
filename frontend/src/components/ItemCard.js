@@ -78,7 +78,7 @@ export default function ItemCard(props) {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-       <UpdatePriceModalBox props={props} />
+       <UpdatePriceModalBox handleClose={handleClose} props= {props} />
       </Modal>
 
 

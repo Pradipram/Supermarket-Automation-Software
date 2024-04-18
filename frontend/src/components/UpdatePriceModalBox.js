@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField';
 import axios from 'axios';
 import { useSnackbar } from './SnackbarContext';
 
-export default function UpdatePriceModalBox({props}) {
+export default function UpdatePriceModalBox({props, handleClose}) {
     const {showSnackbar}=useSnackbar();
     const style = {
         position: 'absolute',
@@ -38,6 +38,7 @@ export default function UpdatePriceModalBox({props}) {
             }
           });
           showSnackbar("Price updated Successfully","success");
+          handleClose();
         }catch(err){
           showSnackbar("Some error occurred","error");
         }
