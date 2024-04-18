@@ -1,6 +1,7 @@
 const express=require("express");
 const app=express();
 const mongoose=require('mongoose');
+require("dotenv").config();
 
 const bodyParser = require('body-parser');
 
@@ -24,7 +25,7 @@ app.get('/',(req,res)=>{
 
 // connecting to database
 try{
-    mongoose.connect("mongodb+srv://prajal824:357pramongo@cluster0.xrmteva.mongodb.net/SuperMarketAutomation");
+    mongoose.connect(process.env.MONGODB_URL);
     console.log("Connected to database");
 }catch(err){
     console.log("Connection to mongodb failed : "+err);
